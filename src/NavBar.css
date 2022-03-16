@@ -1,0 +1,31 @@
+.NavBar {
+  margin-bottom: 1rem;
+  border-bottom: 1px solid black;
+  height: 46px;
+  display:flex;
+  background-color: white;
+}
+
+.NavBar .NavBar-nav {
+  padding: 15px;
+}
+
+.NavBar .NavBar-main-nav {
+  position: absolute;
+  right: 0px;
+  padding: 15px;
+}
+
+.NavBar .NavBar-main-nav a {
+  padding: 0px 10px 0px 10px;
+}
+
+.NavBar a {
+  text-decoration: none;
+  color: blue;
+}
+
+.NavBar .active {
+  color: black;
+  font-weight: bold;
+}
