@@ -14,7 +14,8 @@ import UserContext from "./userContext";
  */
 
 function NavBar({ logOut }) {
-  const { userId } = useContext(UserContext);
+  const { user } = useContext(UserContext);
+
   return (
     <nav className="NavBar">
       <div className="NavBar-nav">
@@ -22,22 +23,22 @@ function NavBar({ logOut }) {
           Friender
         </Link>
       </div>
-      {userId &&
+      {user &&
         <div className="NavBar-main-nav">
           {/* <NavLink exact to="/companies">
             Companies
-          </NavLink>
-          <NavLink exact to="/jobs">
-            Jobs
-          </NavLink>
-          <NavLink exact to="/profile">
-            Profile
           </NavLink> */}
+          <NavLink exact to="/users/nearby">
+            Search Nearby
+          </NavLink>
+          <NavLink exact to="/profile/edit">
+            Edit Profile
+          </NavLink>
           <Link to="/" onClick={logOut}>
             Logout
           </Link>
         </div>}
-      {!userId &&
+      {!user &&
         <div className="NavBar-main-nav">
           <NavLink exact to="/login">
             Login

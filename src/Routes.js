@@ -1,4 +1,6 @@
 import { Route, Switch, Redirect } from "react-router-dom";
+import EditProfile from "./EditProfile";
+import FindFriends from "./FindFriends";
 import Home from "./Home";
 import Login from "./Login";
 import Signup from "./SignUp";
@@ -20,6 +22,12 @@ function Routes({ formActions }) {
       </Route>
       <Route exact path="/login">
         <Login logIn={formActions.logIn} />
+      </Route>
+      <Route exact path="/profile/edit">
+        <EditProfile />
+      </Route>
+      <Route exact path="/users/nearby">
+        <FindFriends />
       </Route>
       <Redirect to="/" />
     </Switch>
